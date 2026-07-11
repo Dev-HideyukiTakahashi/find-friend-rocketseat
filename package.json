@@ -1,0 +1,42 @@
+{
+  "name": "find-friend",
+  "version": "1.0.0",
+  "description": "Entrega do desafio: API em Node.js com Fastify, estruturada segundo os princípios SOLID para o projeto Find Friend",
+  "main": "./dist/server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.1.1",
+    "@types/pg": "^8.20.0",
+    "eslint": "^10.7.0",
+    "globals": "^17.7.0",
+    "prisma": "^7.8.0",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.63.0",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.1.1",
+    "@fastify/jwt": "^10.2.0",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.10.0",
+    "pg": "^8.22.0",
+    "zod": "^4.4.3"
+  }
+}

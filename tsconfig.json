@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "compilerOptions": {
+    // ES2024 é a recomendada para projetos Node.js 24+.
+    "target": "ES2024",
+
+    // Utiliza o sistema de módulos nativo do Node.js (ESM/CommonJS),
+    // respeitando o package.json ("type": "module").
+    "module": "NodeNext",
+
+    // Resolve imports exatamente como o Node.js moderno.
+    // Deve ser usado junto com "module": "NodeNext".
+    "moduleResolution": "NodeNext",
+
+    // APIs JavaScript disponíveis durante a compilação.
+    "lib": ["ES2024"],
+
+    // Habilita todas as verificações de segurança do TypeScript.
+    "strict": true,
+
+    // Obriga verificar se índices podem retornar undefined.
+    // Ex.: array[0], objeto[chave], Map.get(), etc.
+    "noUncheckedIndexedAccess": true,
+
+    // Diferencia corretamente propriedades opcionais de propriedades
+    // cujo valor pode ser undefined.
+    "exactOptionalPropertyTypes": true,
+
+    // Compatibilidade com módulos CommonJS.
+    // Necessário para algumas bibliotecas do ecossistema Node.
+    "esModuleInterop": true,
+
+    // Ignora verificação de tipos dentro do node_modules,
+    // reduzindo bastante o tempo de compilação.
+    "skipLibCheck": true,
+
+    // Garante que cada arquivo possa ser compilado isoladamente.
+    // Recomendado para ferramentas como tsx, esbuild e Vitest.
+    "isolatedModules": true,
+
+    // Preserva imports/exports exatamente como foram escritos,
+    // sem modificações automáticas do TypeScript.
+    "verbatimModuleSyntax": true,
+
+    // Evita problemas de diferença entre Windows e Linux
+    // com nomes de arquivos (maiúsculas/minúsculas).
+    "forceConsistentCasingInFileNames": true,
+
+    // Diretório da saída compilada.
+    "outDir": "./dist",
+
+    // Diretório raiz do código-fonte.
+    "rootDir": "./src",
+
+    // Tipos globais disponíveis no projeto.
+    // Adiciona as definições do Node.js.
+    "types": ["node"]
+  },
+
+  // Arquivos que fazem parte do projeto.
+  // Inclui código da aplicação e testes.
+  "include": ["src/**/*.ts", "test/**/*.ts"]
+}
