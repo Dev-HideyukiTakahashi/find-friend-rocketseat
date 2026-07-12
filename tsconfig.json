@@ -51,14 +51,16 @@
     "outDir": "./dist",
 
     // Diretório raiz do código-fonte.
-    "rootDir": "./src",
+    "rootDir": ".",
 
     // Tipos globais disponíveis no projeto.
     // Adiciona as definições do Node.js.
-    "types": ["node"]
+    "types": ["node"],
+
+    "ignoreDeprecations": "6.0"
   },
 
   // Arquivos que fazem parte do projeto.
   // Inclui código da aplicação e testes.
-  "include": ["src/**/*.ts", "test/**/*.ts"]
+  "include": ["src/**/*.ts", "test/**/*.ts", "generated/**/*.ts"]
 }
