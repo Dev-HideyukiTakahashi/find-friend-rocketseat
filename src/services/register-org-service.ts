@@ -20,7 +20,7 @@ export class RegisterOrgService {
     const orgWithSameEmail = await this.orgRepository.findByEmail(data.email);
 
     if (orgWithSameEmail) {
-      throw new ApiError('Email already registered.', 422);
+      throw new ApiError('Email already registered.', 409);
     }
 
     const { password, ...orgData } = data;

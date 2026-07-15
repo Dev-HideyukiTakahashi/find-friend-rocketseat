@@ -36,7 +36,7 @@ model Org {
   name         String
   email        String  @unique
   passwordHash String  @map("password_hash")
-  whatsapp     String  @unique
+  whatsapp     String
   address      String
   latitude     Decimal @db.Decimal(10, 8)
   longitude    Decimal @db.Decimal(11, 8)

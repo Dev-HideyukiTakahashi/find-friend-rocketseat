@@ -1,13 +1,13 @@
 import { z } from 'zod';
 
 const orgSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
+  name: z.string().trim().min(1, 'Name is required'),
   email: z.email('Invalid email format'),
   password: z.string().min(6, 'Password must be at least 6 characters.'),
   whatsapp: z.string().regex(/^[1-9]{2}9[0-9]{8}$/, {
     message: 'WhatsApp must be in the format DDD + 9 digits (numbers only).',
   }),
-  address: z.string().min(1, 'Address is required'),
+  address: z.string().trim().min(1, 'Address is required'),
   latitude: z.coerce.number().refine(value => {
     return Math.abs(value) <= 90;
   }, 'Latitude must be between -90 and 90'),
